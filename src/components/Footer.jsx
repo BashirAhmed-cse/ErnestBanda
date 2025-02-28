@@ -1,10 +1,9 @@
 import React from "react";
 import {
-  FaFacebook,
-  FaInstagram,
+  FaFacebook
 } from "react-icons/fa";
-import { IoLogoLinkedin } from "react-icons/io5";
-import { IoLogoYoutube } from "react-icons/io";
+
+import { BsTwitterX } from "react-icons/bs";
 import logo from "../../public/images/logo_white.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,17 +54,13 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center max-w-screen-xl">
             <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex gap-4">
-              <a href="#" className="w-8 mx-1">
-                <IoLogoLinkedin className="text-white h-8 w-8" />
-              </a>
-              <a href="#" className="w-8 mx-1">
-                <IoLogoYoutube className="text-white h-8 w-8" />
-              </a>
-              <a href="#" className="w-8 mx-1">
-                <FaFacebook className="text-white h-8 w-8" />
-              </a>
-              <a href="#" className="w-8 mx-1">
-                <FaInstagram className="text-white h-8 w-8" />
+             
+             
+            <a href="https://www.facebook.com/profile.php?id=61572970985821" target="_blank" rel="noopener noreferrer" className="w-8 mx-1">
+  <FaFacebook className="text-white h-8 w-8" />
+</a>
+              <a href="https://x.com/i/flow/login?redirect_after_login=%2FErnestoBandaD9"  target="_blank" className="w-8 mx-1">
+                <BsTwitterX  className="text-white h-8 w-8" />
               </a>
             </div>
           </div>

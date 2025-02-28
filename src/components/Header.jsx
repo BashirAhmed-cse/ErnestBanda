@@ -3,10 +3,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Detect scroll position
   useEffect(() => {
@@ -20,6 +23,14 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleJoinUsClick = () => {
+    if (pathname === "/") {
+      document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#join-us");
+    }
+  };
 
   return (
     <header 
@@ -43,7 +54,9 @@ const Header = () => {
           <Link href="/" className="text-black hover:text-red-600">Home</Link>
           <Link href="/about" className="text-black hover:text-red-600">About</Link>
           <Link href="/issues" className="text-black hover:text-red-600">Issues</Link>
-          <Link href="#join-us" className="text-black hover:text-red-600">Join Us</Link>
+          <button onClick={handleJoinUsClick} className="text-black hover:text-red-600">
+  Join Us
+</button>
           <Link
             href="#" 
             className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
@@ -76,7 +89,9 @@ const Header = () => {
           <Link href="/" className="text-black hover:text-red-600">Home</Link>
           <Link href="/about" className="text-black hover:text-red-600">About</Link>
           <Link href="/issues" className="text-black hover:text-red-600">Issues</Link>
-          <Link href="#join-us" className="text-black hover:text-red-600">Join Us</Link>
+          <button onClick={handleJoinUsClick} className="text-black hover:text-red-600">
+  Join Us
+</button>
         </nav>
       )}
     </header>

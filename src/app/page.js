@@ -1,3 +1,4 @@
+"use client";
 import Hero from "@/components/Hero";
 import JoinUS from "@/components/JoinUS";
 import ElectionCount from "@/components/ElectionCount";
