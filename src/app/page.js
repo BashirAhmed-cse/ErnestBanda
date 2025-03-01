@@ -16,12 +16,12 @@ export default function Home() {
         
 
         {/* Hero Section */}
-        <section className="py-12">
+        <section className="py-5 sm:py-10">
           <Hero />
         </section>
 
         {/* Join Us Section */}
-        <section id="join-us" className="py-12">
+        <section id="join-us" className="py-5">
           <JoinUS />
         </section>
 

@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  FaFacebook
-} from "react-icons/fa";
-
+import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import logo from "../../public/images/logo_white.png";
 import Image from "next/image";
@@ -11,10 +8,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-[#012647]">
-      <div className="py-2 px-12 text-white sm:flex sm:justify-between mx-auto">
+      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-4 text-white mx-auto flex flex-col sm:flex-row sm:justify-between">
         {/* Navigation Links */}
-        <div className="p-5 sm:w-2/12">
-          <ul className="space-y-2">
+        <div className="p-5 sm:w-1/4 md:w-1/5 flex justify-center sm:justify-start">
+          <ul className="space-y-2 text-center sm:text-left">
             <li>
               <Link className="hover:text-red-500" href="/">
                 Home
@@ -44,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* Logo and Social Media Icons */}
-        <div className="p-5 sm:w-7/12 flex items-center justify-center flex-col">
+        <div className="p-5 flex flex-col items-center justify-center sm:items-start sm:w-1/4 md:w-1/5">
           <Image
             src={logo}
             alt="Ernest Banda Logo"
@@ -52,29 +49,33 @@ const Footer = () => {
           />
           
           {/* Social Media Icons */}
-          <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center max-w-screen-xl">
-            <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex gap-4">
-             
-             
-            <a href="https://www.facebook.com/profile.php?id=61572970985821" target="_blank" rel="noopener noreferrer" className="w-8 mx-1">
-  <FaFacebook className="text-white h-8 w-8" />
-</a>
-              <a href="https://x.com/i/flow/login?redirect_after_login=%2FErnestoBandaD9"  target="_blank" className="w-8 mx-1">
-                <BsTwitterX  className="text-white h-8 w-8" />
-              </a>
-            </div>
+          <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center md:flex-row gap-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=61572970985821"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 mx-1"
+            >
+              <FaFacebook className="text-white h-8 w-8" />
+            </a>
+            <a
+              href="https://x.com/i/flow/login?redirect_after_login=%2FErnestoBandaD9"
+              target="_blank"
+              className="w-8 mx-1"
+            >
+              <BsTwitterX className="text-white h-8 w-8" />
+            </a>
           </div>
         </div>
 
         {/* Contact Information */}
-        <div className="p-5 sm:w-2/12">
-          <div className="text-sm uppercase text-white font-bold">Contact Us</div>
-          <ul className="space-y-2">
+        <div className="p-5 sm:w-1/4 md:w-1/5 pb-10 flex flex-col justify-center sm:items-start">
+          <div className="text-sm text-center uppercase text-white font-bold mb-2">
+            Contact Us
+          </div>
+          <ul className="space-y-2 text-center sm:text-left">
             <li>
-              <a
-                className="hover:text-red-500"
-                href="mailto:ernestobanda@pm.me"
-              >
+              <a className="hover:text-red-500" href="mailto:ernestobanda@pm.me">
                 ernestobanda@pm.me
               </a>
             </li>
@@ -86,8 +87,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
-      
     </div>
   );
 };

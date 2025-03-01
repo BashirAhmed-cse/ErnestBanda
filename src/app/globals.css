@@ -1,30 +1,37 @@
+/* Import Tailwind CSS */
 @import "tailwindcss";
 
+/* Font Theme (Make sure the fonts are defined in your config or globals) */
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Default Root Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #EAEBE6;
+  --foreground: #EAEBE6;
 }
 
+/* Dark Mode Variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #EAEBE6;
+    --foreground: #EAEBE6;
   }
 }
 
+/* Apply Background and Text Color */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* This is overridden by --font-sans if set in your config */
+  min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+  display: flex;
+  flex-direction: column; /* Allow children to grow and take available space */
 }
 
-/* Add this to your global CSS file or within a <style> tag */
-
+/* Scroll Animation */
 @keyframes scroll {
   0% {
     transform: translateX(100%);
@@ -34,8 +41,8 @@ body {
   }
 }
 
+/* Scrolling Text Animation */
 .animate-scroll {
   animation: scroll 15s linear infinite;
   white-space: nowrap;
 }
-

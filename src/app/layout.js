@@ -22,11 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen bg-[#EAEBE6] dark:bg-[#2D2D2D]`} // Light mode and dark mode background colors
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

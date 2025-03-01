@@ -37,29 +37,29 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
         ${scrolling ? "bg-white shadow-md" : "bg-[#EAEBE6]"}`}
     >
-      <div className="flex justify-between items-center px-4 md:px-16 py-2">
+      <div className="w-full max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-2">
         {/* Logo (Clickable - Redirects to Home) */}
         <Link href="/">
           <Image 
             src={logo} 
             alt="Ernest Banda Logo" 
-            width={70} 
-            height={70} 
-            className="w-16 h-16 md:w-20 md:h-20 object-contain cursor-pointer"
+            width={85} 
+            height={85} 
+            className="w-16 h-16 md:w-25 md:h-25 object-contain cursor-pointer"
           />
         </Link>
 
         {/* Desktop Navigation (Visible on larger screens) */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link href="/" className="text-black hover:text-red-600">Home</Link>
-          <Link href="/about" className="text-black hover:text-red-600">About</Link>
-          <Link href="/issues" className="text-black hover:text-red-600">Issues</Link>
-          <button onClick={handleJoinUsClick} className="text-black hover:text-red-600">
+          <Link href="/" className="text-black hover:text-red-600 text-2xl font-semibold">Home</Link>
+          <Link href="/about" className="text-black hover:text-red-600 text-2xl font-semibold">About</Link>
+          <Link href="/issues" className="text-black hover:text-red-600 text-2xl font-semibold">Issues</Link>
+          <button onClick={handleJoinUsClick} className="text-black hover:text-red-600 text-2xl font-semibold">
   Join Us
 </button>
           <Link
             href="#" 
-            className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
+            className="bg-red-600 text-white px-2 py-2 rounded-lg hover:bg-red-700 text-2xl font-semibold"
           >
             Donate
           </Link>
