@@ -1,16 +1,29 @@
+"use client";
+
 import React from "react";
+import { useRouter } from "next/navigation";
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import logo from "../../public/images/logo_n.png";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const router = useRouter();
+  const { pathname } = router;
+
+  const handleJoinUsClick = () => {
+    if (pathname === "/") {
+      document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#join-us");
+    }
+  };
+
   return (
     <div className="bg-[#012647]">
-      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-4 text-white mx-auto flex flex-col sm:flex-row sm:justify-between">
+      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-6 text-white mx-auto flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-0">
         {/* Navigation Links */}
-        <div className="p-5 sm:w-1/4 md:w-1/5 flex justify-center sm:justify-start">
+        <div className="flex flex-col items-center sm:items-start sm:w-1/4 md:w-1/5">
           <ul className="space-y-2 text-center sm:text-left">
             <li>
               <Link className="hover:text-red-500" href="/">
@@ -28,9 +41,9 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-red-500" href="#join-us">
+              <button onClick={handleJoinUsClick} className="hover:text-red-500">
                 Join Us
-              </Link>
+              </button>
             </li>
             <li>
               <Link className="text-red-500" href="https://secure.anedot.com/ernest-banda-campaign/dcd772fc-1ff2-44b7-a30d-77fce7078f9e">
@@ -41,27 +54,29 @@ const Footer = () => {
         </div>
 
         {/* Logo and Social Media Icons */}
-        <div className="p-5 flex flex-col items-center justify-center sm:items-start sm:w-1/4 md:w-1/5">
+        <div className="flex flex-col items-center sm:items-center sm:w-1/4 md:w-1/5 text-center">
           <Image
-            src={logo}
+            src="/images/logo_n.png"
             alt="Ernest Banda Logo"
-            className="w-40 h-40 md:w-60 md:h-40 object-contain"
+            width={160}
+            height={160}
+            className="object-contain"
           />
-          
+
           {/* Social Media Icons */}
-          <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center md:flex-row gap-4">
+          <div className="flex py-4 text-gray-800 text-sm flex-row justify-center gap-4">
             <a
               href="https://www.facebook.com/profile.php?id=61572970985821"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 mx-1"
+              className="w-8"
             >
               <FaFacebook className="text-white h-8 w-8" />
             </a>
             <a
               href="https://x.com/i/flow/login?redirect_after_login=%2FErnestoBandaD9"
               target="_blank"
-              className="w-8 mx-1"
+              className="w-8"
             >
               <BsTwitterX className="text-white h-8 w-8" />
             </a>
@@ -69,22 +84,14 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="p-5 sm:w-1/4 md:w-1/5 pb-10 flex flex-col justify-center sm:items-start">
-          <div className="text-sm text-center uppercase text-white font-bold mb-2">
+        <div className="flex flex-col items-center sm:items-start sm:w-1/4 md:w-1/5 text-center">
+          <button
+            onClick={handleJoinUsClick}
+            className="text-sm uppercase text-white font-bold cursor-pointer"
+          >
             Contact Us
-          </div>
-          <ul className="space-y-2 text-center sm:text-left">
-            <li>
-              <a className="hover:text-red-500" href="mailto:ernestobanda@pm.me">
-                ernestobanda@pm.me
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-red-500" href="tel:+123456789">
-                123-456-789
-              </a>
-            </li>
-          </ul>
+          </button>
+          
         </div>
       </div>
     </div>

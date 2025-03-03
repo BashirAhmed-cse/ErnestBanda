@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 const ElectionCount = () => {
     // Set the target date to March 25, 2025
-    const targetDate = new Date("2025-03-25T00:00:00");
+    const targetDate = new Date("2025-05-03T07:00:00");
+
   
     const [timeLeft, setTimeLeft] = useState({
       days: 0,

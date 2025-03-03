@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import JoinUS from "@/components/JoinUS";
 import ElectionCount from "@/components/ElectionCount";
 import Support from "@/components/Support";
+import EarlyVotingCount from "@/components/EarlyVotingCount";
 
 
 export default function Home() {
@@ -28,6 +29,10 @@ export default function Home() {
         {/* Election Countdown */}
         <section className="py-12">
           <ElectionCount />
+        </section>
+        {/* Election Countdown */}
+        <section className="py-12">
+          <EarlyVotingCount />
         </section>
 
         {/* Support Section */}
