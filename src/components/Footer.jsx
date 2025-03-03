@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import logo from "../../public/images/logo_white.png";
+import logo from "../../public/images/logo_n.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,9 +33,9 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a className="text-red-500" href="#">
+              <Link className="text-red-500" href="https://secure.anedot.com/ernest-banda-campaign/dcd772fc-1ff2-44b7-a30d-77fce7078f9e">
                 Donate
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

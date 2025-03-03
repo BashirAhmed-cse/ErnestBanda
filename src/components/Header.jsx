@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../public/images/logo.png";
+import logo from "../../public/images/logo_n.png";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -58,7 +58,7 @@ const Header = () => {
   Join Us
 </button>
           <Link
-            href="#" 
+            href="https://secure.anedot.com/ernest-banda-campaign/dcd772fc-1ff2-44b7-a30d-77fce7078f9e" 
             className="bg-red-600 text-white px-2 py-2 rounded-lg hover:bg-red-700 text-2xl font-semibold"
           >
             Donate
@@ -67,7 +67,7 @@ const Header = () => {
 
         {/* Donate Button (Always Visible on Mobile) */}
         <Link
-          href="#" 
+          href="https://secure.anedot.com/ernest-banda-campaign/dcd772fc-1ff2-44b7-a30d-77fce7078f9e" 
           className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 md:hidden"
         >
           Donate

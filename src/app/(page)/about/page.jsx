@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="h-auto w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#EAEBE6] shadow-lg rounded-lg mt-25">
+    <div className="h-screen w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#EAEBE6] shadow-lg rounded-lg mt-25">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-gray-800">
         {/* Left Side Content (60%) */}
         <div className="md:col-span-3 flex flex-col justify-center">
