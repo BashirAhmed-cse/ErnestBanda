@@ -7,17 +7,22 @@ import Image from "next/image";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isImageChanging, setIsImageChanging] = useState(false); // For controlling animation state
   const images = [hero1, hero3];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+      setIsImageChanging(true); // Start the transition animation
+      setTimeout(() => {
+        setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+        setIsImageChanging(false); // End the transition animation after image change
+      }, 500); // Match the duration of the transition
     }, 3000);
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row w-full  mx-auto min-h-[400px] md:min-h-[600px] xl:min-h-[700px] 2xl:min-h-[800px] 4xl:min-h-[900px]">
+    <section className="flex flex-col md:flex-row w-full mx-auto min-h-[400px] md:min-h-[600px] xl:min-h-[700px] 2xl:min-h-[800px] 4xl:min-h-[900px]">
       {/* Left Side - Hero Image + Text */}
       <div className="relative flex-1 flex flex-col items-center justify-center px-4 md:px-4 bg-[#EAEBE6]">
         {/* Sliding Hero Images */}
@@ -27,7 +32,7 @@ const Hero = () => {
             alt="Campaign Image"
             fill
             style={{ objectFit: "cover" }}
-            className="w-full h-full rounded-lg shadow-md"
+            className={`w-full h-full rounded-lg shadow-md transition-opacity duration-1000 ${isImageChanging ? 'opacity-0' : 'opacity-100'}`}
           />
         </div>
 
