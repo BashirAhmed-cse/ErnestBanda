@@ -69,14 +69,14 @@ const JoinUS = () => {
       />
       <h2 className="text-3xl font-bold mb-6">JOIN US</h2>
       <form className="max-w-lg mx-auto space-y-6" onSubmit={handleSubmit}>
-        <div className="flex space-x-4">
+        <div className="flex gap-4">
           <input
             type="text"
             name="firstName"
             placeholder="First Name*"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500"
+            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500 relative z-10"
             required
           />
           <input
@@ -85,7 +85,7 @@ const JoinUS = () => {
             placeholder="Last Name*"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500"
+            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500 relative z-10"
             required
           />
         </div>
@@ -96,7 +96,7 @@ const JoinUS = () => {
             placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500"
+            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500 relative z-10"
             required
           />
           <input
@@ -105,7 +105,7 @@ const JoinUS = () => {
             placeholder="Phone*"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500"
+            className="w-full border-b-2 bg-transparent text-lg outline-none placeholder-white focus:border-indigo-500 relative z-10"
             required
           />
         </div>
