@@ -61,7 +61,7 @@ const JoinUS = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-red-600 to-blue-900 text-white text-center p-8 relative">
+    <section id="join-us" className="bg-gradient-to-b from-red-600 to-blue-900 text-white text-center p-8 relative">
       <Image
         src={logo}
         alt="Logo"
