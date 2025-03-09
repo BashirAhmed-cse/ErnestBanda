@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from "react";
 import hero1 from "../../public/images/hero1.jpeg";
 import hero3 from "../../public/images/hero3.jpeg";
+import hero2 from "../../public/images/hero2.png";
+import hero4 from "../../public/images/hero4.jpeg";
 import leftSide from "../../public/images/left_side.jpeg";
 import Image from "next/image";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageChanging, setIsImageChanging] = useState(false); // For controlling animation state
-  const images = [hero1, hero3];
+  const images = [hero1, hero3,hero2,hero4];
 
   useEffect(() => {
     const intervalId = setInterval(() => {

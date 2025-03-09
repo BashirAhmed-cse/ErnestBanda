@@ -1,8 +1,26 @@
 "use client";
-import React from "react";
-import Image from "next/image";
 
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import About1 from "../../../../public/images/about-2.jpeg";
+import About3 from "../../../../public/images/about-3.jpeg";
 const About = () => {
+
+  const [currentImage, setCurrentImage] = useState(0);
+    const [isImageChanging, setIsImageChanging] = useState(false); // For controlling animation state
+    const images = [About1, About3,];
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setIsImageChanging(true); // Start the transition animation
+        setTimeout(() => {
+          setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+          setIsImageChanging(false); // End the transition animation after image change
+        }, 500); // Match the duration of the transition
+      }, 3000);
+      return () => clearInterval(intervalId);
+    }, []);
+
   return (
     <div className="h-screen w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-[#EAEBE6] shadow-lg rounded-lg mt-25">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-gray-800">
@@ -42,14 +60,14 @@ const About = () => {
 
         {/* Right Side Image (40%) */}
         <div className="md:col-span-2 flex justify-center items-center w-full h-[400px] md:h-full relative">
-   
-          <Image
-            src='/images/about.png'
-            alt="About Ernest Banda"
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-lg shadow-lg"
-          />
+   <Image
+               src={images[currentImage]}
+               alt="About Ernest Banda"
+               fill
+               style={{ objectFit: "cover" }}
+               className={`rounded-lg shadow-lg transition-opacity duration-1000 ${isImageChanging ? 'opacity-0' : 'opacity-100'}`}
+             />
+          
         </div>
       </div>
     </div>
