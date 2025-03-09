@@ -26,8 +26,10 @@ const Header = () => {
 
   const handleJoinUsClick = () => {
     if (pathname === "/") {
+      // On the homepage, scroll to the #join-us section
       document.getElementById("join-us")?.scrollIntoView({ behavior: "smooth" });
     } else {
+      // On other pages, navigate to the homepage with #join-us
       router.push("/#join-us");
     }
   };
@@ -55,8 +57,8 @@ const Header = () => {
           <Link href="/about" className="text-black hover:text-red-600 text-2xl font-semibold">About</Link>
           <Link href="/issues" className="text-black hover:text-red-600 text-2xl font-semibold">Issues</Link>
           <button onClick={handleJoinUsClick} className="text-black hover:text-red-600 text-2xl font-semibold">
-  Join Us
-</button>
+            Join Us
+          </button>
           <Link
             href="https://secure.anedot.com/ernest-banda-campaign/dcd772fc-1ff2-44b7-a30d-77fce7078f9e" 
             className="bg-red-600 text-white px-2 py-2 rounded-lg hover:bg-red-700 text-2xl font-semibold"
@@ -90,8 +92,8 @@ const Header = () => {
           <Link href="/about" className="text-black hover:text-red-600">About</Link>
           <Link href="/issues" className="text-black hover:text-red-600">Issues</Link>
           <button onClick={handleJoinUsClick} className="text-black hover:text-red-600">
-  Join Us
-</button>
+            Join Us
+          </button>
         </nav>
       )}
     </header>

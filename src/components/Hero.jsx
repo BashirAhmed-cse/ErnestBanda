@@ -83,7 +83,7 @@ const Hero = () => {
         transition={{ duration: 1, delay: 1.2 }}
         className="relative flex-1 flex flex-col items-center justify-center px-4 md:px-4 bg-[#EAEBE6]"
       >
-        <div className="relative w-full h-[200px] md:h-full">
+        <div  className="relative w-full h-[200px] md:h-full">
           <Image
             src={leftSide}
             alt="Campaign Image"
