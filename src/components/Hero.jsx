@@ -5,7 +5,7 @@ import Image from "next/image";
 import hero1 from "../../public/images/hero1.jpeg";
 import hero3 from "../../public/images/hero3.jpeg";
 import hero2 from "../../public/images/hero2.png";
-import hero4 from "../../public/images/hero4.jpeg";
+import hero4 from "../../public/images/hero4n.jpeg";
 import leftSide from "../../public/images/left_side.jpeg";
 
 const images = [hero1, hero3];

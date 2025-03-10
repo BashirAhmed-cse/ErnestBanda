@@ -13,7 +13,7 @@ const Section = ({ children }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-12"
+      className="py-4"
     >
       {children}
     </motion.section>
@@ -30,9 +30,9 @@ export default function Home() {
         </section>
 
         {/* Join Us Section */}
-        <Section>
+        <>
           <JoinUS />
-        </Section>
+        </>
 
         {/* Election Countdown */}
         <Section>
@@ -47,11 +47,7 @@ export default function Home() {
         {/* Support Section */}
         <Section>
           <Support />
-          <div className="max-w-lg mx-auto flex items-center justify-center">
-            <p className="text-[#012647] font-semibold text-sm sm:text-lg flex align-middle items-center justify-center mt-5 border border-[#012647] rounded-sm w-full max-w-fit p-2">
-              Paid for by Ernest Banda for Dallas City Council District 9
-            </p>
-          </div>
+         
         </Section>
       </div>
     </main>
