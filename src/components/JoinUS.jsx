@@ -136,7 +136,7 @@ const JoinUS = () => {
                   </span>
                 </label>
               </div>
-              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+              {error && <p className="text-red-500 bg-white p-2 rounded-lg text-sm mt-2">{error}</p>}
               {successMessage && <p className="text-green-500 text-sm mt-2">{successMessage}</p>}
               <button
                 type="submit"
@@ -149,7 +149,7 @@ const JoinUS = () => {
           </section>
         </div>
         <div className="md:col-span-2 flex justify-center items-center w-full h-[450px] relative">
-          <Image src="/images/hero4.jpeg" alt="Elizabeth Matus" fill className="rounded-xl" />
+          <Image src="/images/joinus.jpg" alt="Elizabeth Matus" fill className="rounded-xl" />
         </div>
       </div>
     </div>
