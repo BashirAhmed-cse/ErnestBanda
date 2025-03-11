@@ -2,10 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import hero1 from "../../public/images/hero1.jpeg";
-import hero3 from "../../public/images/hero3.jpeg";
-import hero2 from "../../public/images/hero2.png";
-import hero4 from "../../public/images/hero4n.jpeg";
+import hero1 from "../../public/images/heo_n.jpg";
+import hero3 from "../../public/images/heo_n2.jpg";
 import leftSide from "../../public/images/left_side.jpeg";
 
 const images = [hero1, hero3];
@@ -13,7 +11,7 @@ const images = [hero1, hero3];
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageChanging, setIsImageChanging] = useState(false); // For controlling animation state
-  const images = [hero1, hero3,hero2,hero4];
+  const images = [hero1, hero3];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
